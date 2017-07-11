@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.snapschool.mlps.ClassRoutineActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:background="@drawable/common_gradient">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/classRoutine"
+            android:id="@+id/classRoutine_textView"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#000000"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="#73767A"
+            android:id="@+id/class_routine_picker_layout">
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:id="@+id/class_list_spinner"
+                android:spinnerMode="dialog"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp">
+            </Spinner>
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:id="@+id/section_list_spinner"
+                android:spinnerMode="dialog">
+            </Spinner>
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25"
+                android:id="@+id/day_list_spinner"
+                android:spinnerMode="dialog">
+            </Spinner>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".25">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:text="@string/view"
+                    android:textSize="14sp"
+                    android:id="@+id/view_button"
+                    android:background="#2D95B8"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:textAllCaps="false"
+                    android:onClick="viewButtonAction"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/classRoutine_listView"
+            android:layout_below="@+id/class_routine_picker_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:background="#FAFAFA"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

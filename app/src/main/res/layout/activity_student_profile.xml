@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.snapschool.mlps.StudentProfileActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".25"
+        android:background="@drawable/common_gradient">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/student_imageView"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/desc"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/username"
+            android:id="@+id/studentName_textView"
+            android:layout_below="@+id/student_imageView"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:textColor="#000000"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".75">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:id="@+id/segment_control_holder_layout"
+            android:background="#D5DADE">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/transparent">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/studentProfile"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:textColor="#ffffff"
+                    android:background="#45BBF7"
+                    android:onClick="profileButtonAction"
+                    android:id="@+id/profile_button"
+                    style="@android:style/ButtonBar"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/studentMarks"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:textColor="#45BBF7"
+                    android:background="#ffffff"
+                    android:onClick="marksButtonClicked"
+                    android:id="@+id/marks_button"
+                    style="@android:style/ButtonBar"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/student_profile_listView"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/segment_control_holder_layout"
+            android:dividerHeight="1dp"
+            android:divider="#DFDEE1"
+            android:background="#FAFAFA"/>
+
+        <ExpandableListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/student_marks_listView"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/segment_control_holder_layout"
+            android:dividerHeight="1dp"
+            android:divider="@android:color/darker_gray"
+            android:background="#FAFAFA">
+        </ExpandableListView>
+
+    </RelativeLayout>
+
+</LinearLayout>

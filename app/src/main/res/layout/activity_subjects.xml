@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.snapschool.mlps.SubjectsActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:background="@drawable/common_gradient">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subjects"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/subject_textView"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/subject_textView"
+            android:id="@+id/classList_spinner"
+            android:spinnerMode="dialog"
+            android:layout_centerHorizontal="true"
+            android:layout_alignLeft="@+id/subject_textView"
+            android:layout_alignStart="@+id/subject_textView"
+            android:layout_alignRight="@+id/subject_textView"
+            android:layout_alignEnd="@+id/subject_textView">
+        </Spinner>
+    </RelativeLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:background="#FAFAFA"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:id="@+id/subjects_listView">
+    </ListView>
+
+</LinearLayout>

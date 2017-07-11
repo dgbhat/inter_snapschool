@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.snapschool.mlps.UserListActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:background="@drawable/common_gradient">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:text="@string/usertype"
+            android:id="@+id/userType_textView"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:text="@string/classname"
+            android:id="@+id/className_textView"
+            android:layout_below="@+id/userType_textView"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:background="#FAFAFA">
+
+        <SearchView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/user_searchView"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="#9CC3D7" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/users_listView"
+            android:layout_below="@+id/user_searchView"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:divider="#DFDEE1"
+            android:dividerHeight="1dp"/>
+    </RelativeLayout>
+
+</LinearLayout>

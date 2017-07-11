@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_gradient"
+    tools:context="com.snapschool.mlps.LoginActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/copyright"
+        android:textSize="12sp"
+        android:textColor="#6886A3"
+        android:gravity="center"
+        android:id="@+id/copyright_textView"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/signIn"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:textAllCaps="false"
+        android:background="#1E949E"
+        android:id="@+id/login_button"
+        android:layout_above="@+id/copyright_textView"
+        android:layout_centerHorizontal="true"
+        android:onClick="loginAction"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="@string/forgotPassword"
+        android:textSize="14sp"
+        android:textColor="#88A0AC"
+        android:textAllCaps="false"
+        android:background="@android:color/transparent"
+        android:id="@+id/forgot_password_button"
+        android:layout_above="@+id/login_button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        android:onClick="forgotPasswordAction"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/lower_line_imageView"
+        android:background="#88A0AC"
+        android:layout_above="@+id/forgot_password_button"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/desc"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/upper_line_imageView"
+        android:background="#88A0AC"
+        android:layout_above="@+id/lower_line_imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:contentDescription="@string/desc"/>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/password_imageView"
+        android:layout_above="@+id/lower_line_imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/password"
+        android:contentDescription="@string/desc"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/password_editText"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:background="@android:color/transparent"
+        android:layout_above="@+id/lower_line_imageView"
+        android:layout_toRightOf="@+id/password_imageView"
+        android:layout_toEndOf="@+id/password_imageView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignRight="@+id/forgot_password_button"
+        android:layout_alignEnd="@+id/forgot_password_button"
+        android:hint="@string/password"/>
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/email_imageView"
+        android:layout_above="@+id/upper_line_imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/email"
+        android:contentDescription="@string/desc"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/email_editText"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:background="@android:color/transparent"
+        android:layout_above="@+id/upper_line_imageView"
+        android:layout_toRightOf="@+id/email_imageView"
+        android:layout_toEndOf="@+id/email_imageView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignRight="@+id/forgot_password_button"
+        android:layout_alignEnd="@+id/forgot_password_button"
+        android:hint="@string/email"/>
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/logo_imageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/desc"
+        android:src="@drawable/login"
+        android:scaleType="fitCenter"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:id="@+id/app_name_textView"
+        android:layout_below="@+id/logo_imageView"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp" />
+
+</RelativeLayout>

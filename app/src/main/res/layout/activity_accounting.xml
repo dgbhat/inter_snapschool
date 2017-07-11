@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.snapschool.mlps.AccountingActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:background="@drawable/common_gradient">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/accounting"
+            android:id="@+id/accounting_title_textView"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:background="#FAFAFA">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="#73767A"
+            android:id="@+id/accounting_option_picker_layout"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp">
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/accounting_month_spinner"
+                android:spinnerMode="dialog"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp">
+
+            </Spinner>
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/accounting_year_spinner"
+                android:spinnerMode="dialog">
+
+            </Spinner>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/accounting_option_picker_layout"
+            android:background="#D5DADE"
+            android:id="@+id/accounting_button_holder_layout">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@android:color/transparent">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/income"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:id="@+id/income_button"
+                    style="@android:style/ButtonBar"
+                    android:background="#ffffff"
+                    android:textColor="#45BBF7"
+                    android:onClick="incomeButtonAction"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/expense"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:id="@+id/expense_button"
+                    style="@android:style/ButtonBar"
+                    android:background="#ffffff"
+                    android:textColor="#45BBF7"
+                    android:onClick="expenseButtonAction"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/accounting_listView"
+            android:layout_below="@+id/accounting_button_holder_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:dividerHeight="1dp"
+            android:divider="@android:color/darker_gray"/>
+    </RelativeLayout>
+
+</LinearLayout>

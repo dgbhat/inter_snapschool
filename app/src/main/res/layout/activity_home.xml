@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/navigationDrawer"
+    tools:context="com.snapschool.mlps.HomeActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/common_gradient">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/welcome_textview"
+                android:layout_marginTop="40dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:text="@string/welcome"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/username_textView"
+                android:layout_below="@+id/welcome_textview"
+                android:layout_centerHorizontal="true"
+                android:textSize="22sp"
+                android:textColor="#000000"
+                android:text="@string/username"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/date_textView"
+                android:layout_below="@+id/username_textView"
+                android:layout_centerHorizontal="true"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:text="@string/date"/>
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_alignTop="@+id/username_textView"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/menu"
+                android:onClick="showMenuAction"
+                android:contentDescription="@string/desc"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/plus_sign">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:baselineAligned="false">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/student_home"
+                        android:contentDescription="@string/desc"/>
+
+                    <TextView
+                        android:id="@+id/total_student_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:text="@string/totalStudent"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/teacher_home"
+                        android:contentDescription="@string/desc"/>
+
+                    <TextView
+                        android:id="@+id/total_teacher_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:text="@string/totalTeacher"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:baselineAligned="false">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/parent_home"
+                        android:contentDescription="@string/desc"/>
+
+                    <TextView
+                        android:id="@+id/total_parent_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:text="@string/totalStudent"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/present"
+                        android:contentDescription="@string/desc"/>
+
+                    <TextView
+                        android:id="@+id/attendance_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:text="@string/attendance"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ExpandableListView
+        android:id="@+id/menu_listView"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#195269"
+        android:choiceMode="singleChoice"
+        android:divider="#2C637D"
+        android:dividerHeight="1dp"
+        android:groupIndicator="@null" >
+    </ExpandableListView>
+
+</android.support.v4.widget.DrawerLayout>

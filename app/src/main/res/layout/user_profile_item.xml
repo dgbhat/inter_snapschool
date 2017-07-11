@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:text="@string/listItemTitle"
+        android:id="@+id/caption_textView"
+        android:gravity="center_vertical|start"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/listItemTitle"
+        android:id="@+id/details_textView"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/caption_textView"
+        android:layout_toEndOf="@id/caption_textView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center_vertical|end"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:onClick="profileTextClicked"/>
+</RelativeLayout>
